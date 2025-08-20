@@ -7,7 +7,6 @@ html {
 
 .main-content {
   position: relative;
-  top: 5.3125rem; /* To offset for fixed header. */
   background-color: aqua;
 }
 
@@ -19,6 +18,10 @@ html {
   border-radius: 4px;
   background-color: #4a4a4a;
   color: white;
+}
+.main-content img {
+  width: 100%;
+  display: block;
 }
 
 .image-container {
@@ -42,6 +45,7 @@ header {
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
+  z-index: 1000;
 }
 
 header .content {
@@ -118,9 +122,17 @@ header .mobile {
   justify-content: flex-start;
   align-items: flex-start;
   height: 43.5rem;
+  background-image: url('../images/banner-landingpage.jpg');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
+
 #sign-up-cta {
+  position: relative;
+  top: 171px;
+  left: 10%;
   padding: 0 5rem 2.5rem 5rem;
   border: solid 1px #979797;
   border-radius: 4px;
