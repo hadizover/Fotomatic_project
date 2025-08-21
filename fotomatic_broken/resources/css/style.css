@@ -7,7 +7,7 @@ html {
 
 .main-content {
   position: relative;
-  background-color: aqua;
+  top: 5.3125rem; /* To offset for fixed header. */
 }
 
 .center {
@@ -286,6 +286,7 @@ header .mobile {
 #filters-section {
   padding: 4rem 0;
   background-color: #4a4a4a;
+ 
 }
 
 #filters-section .content {
@@ -307,17 +308,30 @@ header .mobile {
 }
 
 #filters-section .images-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   max-width: 100%;
   padding: 0 1%;
+  border: 1px solid #f70000;
+  margin-top: 5rem;
+  height: 20rem;
+  margin-bottom: 0.5rem;
 }
+.image-container {
 
+}
 @media only screen and (max-width: 760px) {
   #filters-section {
-    padding: 1.5rem 0 0 0;
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr); 
+    height: auto; 
+    padding: 0 1rem; 
+    gap: 5rem; 
   }
 
   #filters-section .content {
     margin-bottom: 1rem;
+    margin-top: 4rem;
   }
 
   #filters-section .content h2 {
@@ -345,6 +359,7 @@ header .mobile {
 
 #quotes-section {
   background-color: #f3f3f3;
+
 }
 
 #quotes-section content {
@@ -357,9 +372,15 @@ header .mobile {
   font-size: 1.875rem;
   line-height: 1.1;
   font-style: italic;
-  color: #4a4a4a;
 }
-
+.quote {
+  font-family: "Palatino";
+  color: #4a4a4a;
+  line-height: 1.1;
+  font-style: italic;
+  font-weight: 500;
+  font-size: large;
+}
 #quotes-section quote-citation {
   height: 1.875rem;
 }
@@ -370,12 +391,13 @@ header .mobile {
   }
 
   #quotes-section quote {
+     display: block;
     font-size: 1.5rem;
     line-height: 1.4;
+ 
   }
 
   #quotes-section quote-citation {
-    display: block;
     padding-top: 1rem;
     margin: auto;
   }
